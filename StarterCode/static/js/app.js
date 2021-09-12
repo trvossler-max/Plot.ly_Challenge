@@ -35,8 +35,28 @@ function createCharts(sample) {
     let labels = result.otu_labels;
     let values = result.sample_values;
 
+  // Build a Bubble Chart
+  let bubbleData =[
+    {
+      x: ids,
+      y: values,
+      mode: 'markers',
+      marker: {
+        color: ids,
+        size: values,
+      }
+    }
+  ];
+
+  let bubbleLayout = {
+    xaxis: {title: 'OTU ID'},
+    // margin: { t : 0},
+  };
+
+  Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
+
   // Build a bar chart
-    let bar_data =[
+    let barData =[
       {
         y:ids.slice(0, 10).map(otuID => `OTU ${otuID}`).reverse(),
         x:values.slice(0,10).reverse(),
@@ -48,13 +68,13 @@ function createCharts(sample) {
     ];
   
     let barLayout = {
-      title: "Top 10 Bacteria Cultures Found",
-      margin: { t: 30, l: 150 }
+      title: "Top 10 OTU's Found",
+      // margin: { t: 30, l: 150 }
     };
   
-    Plotly.newPlot("bar", bar_data, barLayout);
+    Plotly.newPlot("bar", barData, barLayout);
   });
-  }
+}
 
 // Creat init function
 function init() {

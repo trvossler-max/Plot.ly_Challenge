@@ -1,0 +1,13 @@
+/* Giving the body the specified background color, adding font sizes for the h1 and h3 elements we'll be using */
+body {
+    background-color: #bee3f5;
+    }
+
+.jumbotron,
+.well {
+    background-color:cornflowerblue
+}
+
+/* h6 {
+    font-weight: bold;
+} */
