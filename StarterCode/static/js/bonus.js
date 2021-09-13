@@ -40,7 +40,7 @@ function createGaugeChart(sample) {
     //log to console to check data
         console.log(washFreq);
 
-      const guageData = [
+      const gaugeData = [
         {
         domain: { x: [0, 1], y: [0, 1] },
         value: washFreq,
@@ -48,37 +48,31 @@ function createGaugeChart(sample) {
         type: "indicator",
         mode: "gauge+number",     
         gauge: {
-        axis: { range: [0,9] },
-        bar: { color: "#F60E27" },
-        steps: [
-          { range: [0, 1], color: "#E4EAE8"},
-          { range: [1, 2], color: "#CBE0DA" }, 
-          { range: [2, 3], color: "#A8E0D0" },
-          { range: [3, 4], color: "#8CD7C2" },
-          { range: [4, 5], color: "#74C2AA" },
-          { range: [5, 6], color: "#5CB89C" },
-          { range: [6, 7], color: "#3AA382" },
-          { range: [7, 8], color: "#176950" },
-          { range: [8, 9], color: "#074532" }
-                
-        ],
-
-       threshold: {
-          value: washFreq
-        }
+          axis: { range: [0,9] },
+          bar: { color: "#F60E27" },
+          steps: [
+            { range: [0, 1], color: "#E4EAE8"},
+            { range: [1, 2], color: "#CBE0DA" }, 
+            { range: [2, 3], color: "#A8E0D0" },
+            { range: [3, 4], color: "#8CD7C2" },
+            { range: [4, 5], color: "#74C2AA" },
+            { range: [5, 6], color: "#5CB89C" },
+            { range: [6, 7], color: "#3AA382" },
+            { range: [7, 8], color: "#176950" },
+            { range: [8, 9], color: "#074532" }
+            ],
       }
     }
   ]; 
-    const guageLayout = {  width: 475, 
+    const gaugeLayout = {  width: 475, 
                    height: 350, 
                    margin: { t: 0, b: 0 },
                    xaxis: {zeroline:false, showticklabels:false,
                             showgrid:false, range: [-1, 1]},
                     };
 
- 
  // Plot using Plotly
-  Plotly.newPlot('gauge', guageData, guageLayout);
+  Plotly.newPlot('gauge', gaugeData, gaugeLayout);
     });
 };             
 
@@ -120,6 +114,8 @@ function createCharts(sample) {
     title: { text: "<b>Bacteria Cultures per Sample</b>" },
     plot_bgcolor: 'RGB (255, 242, 254)',
     paper_bgcolor: '#E3FBF3',
+    height: 525,
+    margin: {l: 50, r: 50, t: 75, b: 75},
   };
 
   Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
