@@ -1,6 +1,6 @@
 # Plot.ly - Interactive visualization of Belly Button Biodiversity Dataset
 
-![Bacteria by filterforge.com](Images/bacteria.jpg)
+![screen shot](Images/Ploty_Biodiversity.png)
 
 This project builds an interactive dashboard to explore the [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/), which catalogs the microbes that colonize human navels.
 
@@ -16,7 +16,7 @@ The dataset reveals that a small handful of microbial species (also called opera
 
 3. Creation of a bubble chart that displays each sample.
 
-![Bubble Chart](Images/bubble_chart.png)
+![Bubble Chart](Images/Bubble.png)
 
 4. A panel that displays the sample metadata, i.e., an individual's demographic information.
 
@@ -24,26 +24,21 @@ The dataset reveals that a small handful of microbial species (also called opera
 
 5. A guage chart that plots the weekly washing frequency of the individual.
 
+![Weekly Washing Frequency Gauge](Images/Guage.png)
+
 6. A drop-down selection that update all of the plots any time that a new sample is selected.
-
-## Advanced Challenge Assignment (Optional)
-
-The following task is advanced and therefore optional.
-
-* Adapt the Gauge Chart from <https://plot.ly/javascript/gauge-charts/> to plot the weekly washing frequency of the individual.
-
-* You will need to modify the example gauge code to account for values ranging from 0 through 9.
-
-* Update the chart whenever a new sample is selected.
-
-![Weekly Washing Frequency Gauge](Images/gauge.png)
 
 ## Deployment
 
-* The app is deployed on GitHub pages 
-
-* The 
+* The app is deployed on GitHub pages or can be viewed using Live Server in visual studio with the data files, js, and css.
+ 
 
 app.js - Includes code for the basic dashboard plots
 
 bonus.js = Includes code for the basic dashboard plots plus the guage and additional formatting and customization to give the dashboard a better appearance.
+
+## File Structure
+data folder - includes the data in a json file used for the project
+Images folder - Includes images used for the readme file
+Starter code - includes the index.htl file and style.css
+  Status Subfolder - Includes the js files used for the web dashboard
